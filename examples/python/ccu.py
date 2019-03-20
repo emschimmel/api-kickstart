@@ -33,7 +33,6 @@ from http_calls import EdgeGridHttpCaller
 from random import randint
 from akamai.edgegrid import EdgeGridAuth
 from config import EdgeGridConfig
-from urlparse import urljoin
 import urllib
 import os
 session = requests.Session()
@@ -93,4 +92,4 @@ if __name__ == "__main__":
 	
 	check_result = checkProgress(purge_post_result["progressUri"])
 	seconds_to_wait = check_result['pingAfterSeconds']
-	print "You should wait %s seconds before checking queue again..." % seconds_to_wait
+	print ("You should wait %s seconds before checking queue again..." % seconds_to_wait)
